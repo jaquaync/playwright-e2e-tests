@@ -10,7 +10,10 @@
   "author": "Jaquay",
   "type": "commonjs",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "login": "npx playwright test tests/functional/login.spec.ts",
+    "demo": "npx playwright test tests/demo/mytest.spec.ts"
+  },
   "devDependencies": {
     "@playwright/test": "^1.56.1",
     "@types/node": "^24.10.1"
