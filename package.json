@@ -11,11 +11,20 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
+    "test:e2e": "npx playwright test --config=config/test.playwright.config.ts tests/e2e/nopcommerce.e2e.spec.ts --headed",
+    "test:make-appmnt": "npx playwright test --config=config/test.playwright.config.ts tests/functional/make.apptmnt.spec.ts",
+    "demo:params": "npx playwright test tests/demo/params.make.apptmnt.spec.ts",
+    "inventory": "npx playwright test tests/functional/inventory.spec.ts",
+    "elements": "npx playwright test tests/demo/element.handling.makeappmnt.spec.ts",
+    "make-appmnt": "npx playwright test tests/functional/make.apptmnt.spec.ts",
     "login": "npx playwright test tests/functional/login.spec.ts",
     "demo": "npx playwright test tests/demo/mytest.spec.ts"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.1",
-    "@types/node": "^24.10.1"
+    "@types/node": "^24.10.1",
+    "allure-playwright": "^3.4.3",
+    "chalk": "^5.6.2",
+    "dotenv": "^17.2.3"
   }
 }
